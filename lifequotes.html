@@ -1,0 +1,163 @@
+      <!DOCTYPE html>
+      <html>
+
+      <head>
+      	<title>Life Quote Generator from Pseudo Database</title>
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  
+		<link href="./quotes_css/Quotes.css" rel="stylesheet">
+		  
+      	<!-- Google Fonts -->	  
+		  
+      	<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+      	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+      	<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+      	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+
+      	<!--<link rel="stylesheet" type="text/css" href="css/something.css">-->
+
+      	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+      	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+      	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+      	<!--Quotes_js-->
+      	<script src="./quotes_js/quotes_js.js"></script>
+      	<script src="./quotes_js/hidecols_js.js"></script>
+
+      	<script>
+      		$(document).ready(function() {
+      			$('#myTable').DataTable();
+      		});
+
+      	</script>
+
+      </head>
+
+      <body>
+      	<div id="mainLanding">
+
+      		<div id="headerbar">
+      			<h1 id="quotesTitle"><a>LIFE QUOTE GENERATOR</a></h1>
+      			<div id="navBar">
+      				<ul style="color: black;">
+      					<li class="active"><a href="#mainLanding">Home</a></li>
+      					<li><a class="aboutInfo aboutBubble" href="#about">About<span class="abouttext" style="text-transform:none;">&copy DanielSmithLDN 2019</span></a></li>
+      				</ul>
+      			</div>
+      		</div>
+
+      		<div id="Quotesection" class="">
+
+      			<div class="quoteButton noselect" onclick="RandomQuote()" style="font-family: 'Yanone Kaffeesatz', sans-serif;">Click Here for a new Quote!</div>
+
+      			<div id="pictureDiv" style="text-align: center; font-family: 'Yanone Kaffeesatz', sans-serif; font-size:2rem;color:white; z-index: 5;">Author will appear here</div><br>
+
+      			<p id="mainQuoteBox" style="text-align: center;font-size: 2rem;color:white; ">...Quote will go here...</p>
+      			<p id="authorReveal" class="author">...</p>
+
+      		</div>
+      	</div>
+
+      	<section id="hiddenQuotesDiv">
+			  
+      		<div id="tableContainer" class="container">
+      			<table id="yTable">
+      				<thead style="border: solid grey 2px; border-style:outset;padding: 50px 5px 50px 5px;">
+      					<tr>
+      						<th>Quote</th>
+      						<th>Author</th>
+      						<th class="rowimage" name="imgcol" style="vertical-align: inset;">Image File Name</th>
+      					</tr>
+      				</thead>
+					<!--        - - - - - - Zero Box - - - - - -->
+      				<tr>
+      					<td class="HiddenQuote">"Whether you think you can, or you think you can't - you're right."</td>
+      					<td class="authorq">Henry Ford</td>
+      					<td class="HiddenImage rowimage" name="imgcol">HenryFord.jpg</td>
+      				</tr>
+
+      				<!--- - - - - - -Quotes from [1] - - - - - -->
+
+      				<tbody>
+      					<tr>
+      						<td class="HiddenQuote">"Luck is what happens when preparation meets opportunity."</td>
+      						<td class="authorq">Seneca</td>
+      						<td class="HiddenImage rowimage" name="imgcol">Seneca.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"We are what we repeatedly do. Excellence, then, is not an act, but a habit."</td>
+      						<td class="authorq">Aristotle</td>
+      						<td class="HiddenImage rowimage" name="imgcol">Aristotle.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."</td>
+      						<td class="authorq">Einstein </td>
+      						<td class="HiddenImage rowimage" name="imgcol">Einstein.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"The important thing is to not stop questioning. Curiosity has its own reason for existing."</td>
+      						<td class="authorq">Einstein</td>
+      						<td class="HiddenImage rowimage" name="imgcol">Einstein.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle."</td>
+      						<td class="authorq">Einstein </td>
+      						<td class="HiddenImage rowimage" name="imgcol">Einstein.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that."</td>
+      						<td class="authorq">Martin Luther King</td>
+      						<td class="HiddenImage rowimage" name="imgcol">MartinLutherKing.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"Faith is taking the first step even when you don't see the whole staircase."</td>
+      						<td class="authorq">Martin Luther King</td>
+      						<td class="HiddenImage rowimage" name="imgcol">MartinLutherKing.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward."</td>
+      						<td class="authorq">Martin Luther King</td>
+      						<td class="HiddenImage rowimage" name="imgcol">MartinLutherKing.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"It does not matter how slowly you go so long as you do not stop."</td>
+      						<td class="authorq">Confucius</td>
+      						<td class="HiddenImage rowimage" name="imgcol">Confucius.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"Wheresoever you go, go with all your heart."</td>
+      						<td class="authorq">Confucius</td>
+      						<td class="HiddenImage rowimage" name="imgcol">Confucius.jpg</td>
+      					</tr>
+
+      					<tr>
+      						<td class="HiddenQuote">"Life is really simple, but men insist on making it complicated."</td>
+      						<td class="authorq">Confucius</td>
+      						<td class="HiddenImage rowimage" name="imgcol">Confucius.jpg</td>
+      					</tr>
+      				</tbody>
+      			</table>
+      			<div id="columnButtonDiv">
+      				<button class="colButton" onclick="hideImgCol()" style="font-family: 'Yanone Kaffeesatz', sans-serif;">Hide ImageFile Column</button>
+      				<button class="colButton" onclick="showImgCol()" style="font-family: 'Yanone Kaffeesatz', sans-serif;">Show ImageFile Column</button>
+      			</div>
+
+      			<br>
+      		</div> <!-- End of Table container -->
+
+      	</section>
+
+      </body>
+      </html>
